@@ -1,0 +1,56 @@
+<!doctype html>
+<html lang="pl">
+  <head>
+    <%- include('layouts/head') %>
+    <title>YeaFuckerModded</title>
+  </head>
+  <body>
+    <%- include('layouts/nav') %>
+    <section class="showcase  animate__animated animate__fadeInUp">
+      <div class="container p-5 pb-2">
+        <h1 id="title" class="mt-5 mb-3">
+          Zagrajmy na modach
+        </h1>
+        <p class="lead fw-normal my-5">
+          Paczka zawiera mnóstwo modów które mają na celu zapewnić nam większe wyzwanie! Jeżeli chcesz dowiedzieć się więcej o danym modzie, po prostu naciśnij na jego nazwę!
+        </p>
+      </div>
+    </section>
+
+    <section class="animate__animated animate__fadeInUp mods-list">
+        <div class="container px-5">
+          <h2 class="my-5 pt-5">
+              Obecnie w paczce jest 71 modów.
+          </h2>
+          <div id="list-of-mods" class="list-group my-5">
+
+          </div>
+      </div>
+    </section>
+
+    <%- include('layouts/script') %>
+    <script>
+      const listOfModsContainer = document.getElementById('list-of-mods')
+
+
+      const fetchModsList = async() => {
+        await fetch('/mody.json')
+          .then(response => response.json())
+          .then(data => {
+            console.log(data)
+            data.forEach(element => {
+              let mod = document.createElement('a')
+              mod.innerText = element.title;
+              mod.classList = "list-group-item list-group-item-action"
+              mod.setAttribute("href", element.link);
+              mod.setAttribute("target", "_blank");
+              listOfModsContainer.appendChild(mod)
+              console.log(element)
+            });
+          })
+        }
+        fetchModsList();
+      
+    </script>
+  </body>
+</html>

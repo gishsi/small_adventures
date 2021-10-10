@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="pl">
+  <head>
+    <%- include('layouts/head') %>
+    <title>YeaFuckerModded</title>
+  </head>
+
+  <body>
+    <%- include('layouts/nav') %>
+    <section class="showcase animate__animated animate__fadeInUp">
+      <div class="container p-5 mt-5">
+        <h1 id="title" class="mb-5">
+          Zagrajmy na modach
+        </h1>
+        <p class="lead fw-normal my-5">
+          Witaj na głównej stronie serwera YeaFucker na modach. Na tej stronie
+          znajdziesz dokładny opis instalacji paczki, listę modów oraz paczkę. Enjoy! 👽
+        </p>
+        <a  id="action-body" href="/pobierz" data-toggle="popover">Pobierz</a>
+      </div>
+    </section>
+    <section class="animate__animated animate__fadeInUp py-5 d-none" id="ip">
+      <div class="container">
+        <h1 id="otwarcie" class="py-3 px-5 rounded-2 overflow-hidden">
+          Oficjalne rozpoczecie serwera: <span class="text-emphasis-secondary fw-bold " id="data"> 28 czerwca 2021 </span>
+        </h1>
+        <p class="ip_p px-5">
+          IP serwera: <a id="action-body" data-toggle="popover" title="Kopiuj"
+            data-content="Kopiuj">yeafucker-modded.mine.game</a>
+        </p>
+    </section>
+    <h2 class="text-center d-none" id="action-final">Copied!</h2>
+    <%- include('layouts/script') %>
+    <script src="./js/userAction.js"></script>
+  </body>
+</html>

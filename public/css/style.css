@@ -1,0 +1,137 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@200;400;700&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Concert+One&family=Farsan&family=IBM+Plex+Mono&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Lora&display=swap');
+@font-face {
+  font-family: BabyBlocks;
+  src: url('../fonts/babyBlocks.ttf');
+}
+:root {
+  --bgColor: #181719;
+  --fontPrimary: #ffffff;
+  --primary: #b0a8b9;
+  --secondary: #A87BE3;
+  --text-emphasis: #20A5C0;
+  --callToAction: #F9F871;
+}
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: 0;
+}
+
+/* NAVBAR */
+nav {
+  color: var(--primary);
+}
+.logo {
+  font-family: BabyBlocks;
+  color: var(--fontPrimary);
+}
+.dropdown a {
+  color: var(--primary);
+}
+
+/* GLOBAL */
+body {
+  font-family: 'Poppins', sans-serif;
+  background-color: var(--bgColor);
+  color: var(--fontPrimary);
+}
+
+h1,
+h2 {
+  font-family: 'Concert One', cursive;
+}
+/* ================================================ Showcase ===============================================*/
+#showcase-text {
+  text-shadow: 1px 1px var(--primary);
+}
+#showcase-text span {
+  text-shadow: none;
+}
+.showcase .container {
+  /* background-color: var(--primary); */
+  border-radius: 5px;
+  margin-bottom: 0;
+}
+.showcase .container h1 {
+  font-weight: 400;
+  color: var(--fontPrimary);
+  font-size: 3rem;
+}
+.showcase .container p {
+  font-size: 1.2rem;
+}
+.text-emphasis-secondary {
+  color: var(--secondary);
+}
+.text-emphasis {
+  color: var(--text-emphasis);
+}
+
+/* IP section */
+.ip_p {
+  font-size: 2rem;
+}
+#action-body {
+  color: var(--text-emphasis);
+  /* display: block; */
+  background: var(--callToAction);
+  color: var(--bgColor);
+  padding: 1rem 5rem;
+}
+#action-body:hover {
+  cursor: pointer;
+}
+#action-final {
+  font-size: 3rem;
+}
+
+/* ========= GUIDE ========== */
+.guide {
+  text-align: center;
+  margin: 0 auto;
+}
+
+.mods-list {
+  background-color: #ffffff;
+  color: var(--bgColor);
+}
+
+/* ========= TITLE ========== */
+#title {
+  color: var(--secondary);
+  position: relative;
+  text-decoration: underline;
+  text-decoration-style: wavy;
+  text-underline-offset: 5px;
+}
+/* #title::after {
+  position: absolute;
+  content: "";
+  background-color: var(--secondary);
+  display: block;
+  width: 80%;
+  height: 20px;
+  bottom: -30px;
+} */
+/* ================================================ Pobierz ===============================================*/
+#ip a {
+  text-decoration: none;
+}
+@media (min-width: 768px) {
+  .showcase .container {
+    text-align: left;
+  }
+  .showcase .container p {
+    font-size: 1.2rem;
+    max-width: 80%;
+  }
+  .showcase .container h1 {
+    font-size: 6rem;
+  }
+  #title {
+    text-underline-offset: 25px;
+  }
+}

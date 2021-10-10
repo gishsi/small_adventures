@@ -1,0 +1,111 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <%- include('layouts/head') %>
+  <link rel="stylesheet" href="./css/style.css">
+    <title>YeaFuckerModded</title>
+  </head>
+  <body>
+    <%- include('layouts/nav') %>
+
+    <section class="showcase p-5 my-5  animate__animated animate__fadeInUp">
+      <div class="container text-center ">
+        <h1>🦊Fox Friendly Guide🦊</h1>
+        <p class="lead fw-normal guide">
+          Aby grać na serwerze YeaFuckerModded należy najpierw przejść przez tę krótką i zrozumiałą instalacje.
+        </p>
+      </div>
+    </section>
+    <section class="spis p-3  animate__animated animate__fadeInUp">
+      <div class="container">
+          <h2 class="text-center">Spis Tresci</h2>
+          <div class="list-group fw-bold w-50 m-auto" id="spisList">
+            <a href="#forge" class="list-group-item list-group-item-action p-2 ">Instalacja Forge</a>
+            <a href="#mods" class="list-group-item list-group-item-action p-2 ">Pobranie modów</a>
+            <a href="#config" class="list-group-item list-group-item-action p-2 ">Konfiguracja</a>
+            <a href="#ram" class="list-group-item list-group-item-action p-2 ">Alokacja RAM</a>
+          </div>
+      </div>
+    </section>
+    <section class="my-5 chapter wow animate__animated animate__fadeInUp" id="forge">
+      <div class="container">
+        <h2>Instalacja Forge</h2>
+        <article>
+          <p>
+            Aby mody działały potrzebujemy Forge w wersji 1.16.5. Możemy go pobrać z tej strony: <a target="#blank" class="text-danger" href=" https://files.minecraftforge.net/net/minecraftforge/forge/">Link do pobrania Forge</a>. Oto jak wygląda strona:
+          </p>
+          <img src="./img/forge/ForgeWebiste.png" alt="" class="img-fluid w-75 mx-auto d-block">
+          <p class="py-3">
+              Klikamy <span class="text-success fw-bold">Installer</span> z sekcji Download Recommended
+          </p>
+          <img src="./img/forge/installer.png" alt="" class="img-fluid mx-auto d-block">
+          <p class="py-3">
+              Zostaniemy przeniesieni na inną stronę. Tutaj należy poczekać parę sekund, a następnie klinkąć <span class="text-success fw-bold">Skip</span>. Wtedy rozpocznie się pobieranie.
+          </p>
+          <img src="./img/forge/wait.png" alt="" class="img-fluid mx-auto d-block">
+          <img src="./img/forge/skip.png" alt="" class="img-fluid mx-auto d-block">
+          <p class="py-3">
+              Teraz zapisujemy gdzieś pobranego Forge i uruchamiamy pobrany plik.
+          </p>
+          <img src="./img/forge/save.png" alt="" class="img-fluid mx-auto d-block">
+          <p class="py-3">
+              W okienku, które pojawi się po uruchomieniu zostawiamy zaznaczone domyślenie <span class="text-success fw-bold">Install Client</span>. Zauważ, że forge instaluje się w folderze <span class="text-primary fw-bold"> .minecraft</span> więc jeżeli miałeś jakiś świat na SinglePlayer polecam zrobić kopię dawnego folderu .minecraft (albo przynajmniej folderu <span class="text-primary fw-bold">saves</span>)
+          </p>
+          <img src="./img/forge/install-client.png" alt="" class="img-fluid mx-auto d-block">
+          <p class="py-3"> 
+              Po instalacji klikamy <span class="text-success fw-bold">OK</span>:
+          </p>
+          <img src="./img/forge/successful.png" alt="" class="img-fluid mx-auto d-block">
+        </article>
+      </div>
+    </section>
+    <%- include('layouts/download') %>      
+    <section class="my-5 chapter" id="config">
+      <div class="container">
+        <h2>Konfiguracja Minecrafta</h2>
+        <article>
+          <p class="py-3">
+            Teraz musimy tylko przeniesc folder mods do folder .minecraft. Aby to zrobic kliknij na Menu Start i wpisz %appdata%
+          </p>
+          <img src="./img/config/appdata.png" alt="" class="img-fluid mx-auto d-block">
+          <p class="py-3">
+            Przejdz do folderu .minecraft i przenieś tam folder mods z pulpitu.
+          </p>
+          <img src="./img/config/minecraftfolder.png" alt="" class="img-fluid mx-auto d-block mb-2">
+          <img src="./img/config/mods.png" alt="" class="img-fluid mx-auto w-75 d-block">
+          <p class="py-3">
+            Po przeniesiu, uruchom Minecraft'a. Zauważ, że wersja powinna mieć w nazwia forge 1.16.5.
+          </p>
+          <img src="./img/config/launcher.png" alt="" class="img-fluid mx-auto d-block">
+          <p class="py-3">
+            Naciśnij graj. Po załadowaniu powinnieneś zobaczyć głowny ekran Minecrafta, a w lewym dolnym rogu ilość zainstalowanych modów.
+          </p>
+          <img src="./img/config/zainstalowany.png" alt="" class="img-fluid mx-auto w-75 d-block">
+        </article>
+      </div>
+    </section>
+    <section class="my-5 chapter" id="ram">
+      <div class="container">
+        <h2>Alokacja RAM</h2>
+        <article>
+          <p class="py-3">
+            Aby paczka ładowała się sprawniej, zaleca się alokowanie 4 - 5 GB RAM'u. Wiem, że dla niektórych nie będzie to możliwe, więc zalecam co najmniej 3GB. Aby zalokować więcej RAM, uruchom Launcher Minecraft'a, a następnie przejdź do zakładki <span class="text-success fw-bold">Installations</span>, klikamy <span class="text-success fw-bold">...</span> i <span class="text-success fw-bold">Edit</span>
+          </p>
+          <img src="./img/alokacja_ram/Screenshot_1.png" alt="" class="img-fluid mx-auto d-block">
+          <img src="./img/alokacja_ram/Screenshot_2.png" alt="" class="img-fluid mx-auto d-block my-3">
+          <p class="py-3">
+            Kliknij <span class="text-success fw-bold">More options</span>
+          </p>
+          <img src="./img/alokacja_ram/Screenshot_3.png" alt="" class="img-fluid mx-auto d-block mb-2">
+          <img src="./img/alokacja_ram/Screenshot_4.png" alt="" class="img-fluid mx-auto d-block">
+          <p class="py-3">
+            W JVM arguments zmienic 2 na 3, 4 lub 5 GB. Na przykład: -Xmx4G-XX (...). Następnie zapisz i uruchom paczkę.
+          </p>
+          <img src="./img/alokacja_ram/Screenshot_5.png" alt="" class="img-fluid mx-auto d-block">
+        </article>
+      </div>
+    </section>
+    <%- include('layouts/success') %>
+    <%- include('layouts/script') %>
+  </body>
+</html>
